@@ -1,113 +1,142 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maloca Peralta | Dossiê A Estética do Medo</title>
+    <title>Maloca Peralta | Conexões</title>
     <style>
-        body { margin: 0; padding: 0; font-family: 'Helvetica', Arial, sans-serif; background-color: #fff; color: #333; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px 0; }
-        iframe { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .btn:hover { background-color: #e6b800 !important; }
+        /* Reset básico */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            color: #1a1a1a;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+
+        /* Foto de Perfil */
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+        }
+
+        p.bio {
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Botões */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: block;
+            padding: 16px 20px;
+            background-color: #fff;
+            color: #1a1a1a;
+            text-decoration: none;
+            border: 1px solid #1a1a1a;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            box-shadow: 4px 4px 0px #1a1a1a;
+        }
+
+        .btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #1a1a1a;
+            background-color: #f0f0f0;
+        }
+
+        .btn.destaque {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: 1px solid #1a1a1a;
+            box-shadow: 4px 4px 0px #999;
+        }
+        
+        .btn.destaque:hover {
+            background-color: #333;
+            box-shadow: 2px 2px 0px #999;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: #888;
+        }
     </style>
 </head>
 <body>
 
-    <section style="
-        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('URL_DA_SUA_FOTO_COM_MAMAO_AQUI');
-        background-size: cover;
-        background-position: center;
-        color: #ffffff;
-        padding: 100px 20px;
-        text-align: center;
-        border-bottom: 8px solid #ffcc00;">
+    <div class="container">
+        <img src="Foto_perfil_maloca.jpg" alt="Foto Maloca Peralta" class="profile-pic">
+        
+        <h1>Maloca Peralta</h1>
+        <p class="bio">Aqui a gente fala de verdade, escreve porque precisa e vive porque Ele vive.</p>
 
-        <div class="container">
-            <h1 style="font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; color: #ffcc00; letter-spacing: 2px;">
-                Dossiê: A Estética do Medo em Curitiba
-            </h1>
+        <div class="links">
+            <a href="https://malocaperalta.com.br/" class="btn destaque">
+                📖 Escreve a porra do livro
+            </a>
+
+            <a href="https://wa.me/5541992313435" class="btn">
+                💬 Chama no WhatsApp
+            </a>
+
+            <a href="https://rafajamur.substack.com" class="btn">
+                🧠 Blog (Substack)
+            </a>
+
+            <a href="dossie_a_estetica_do_medo.html" class="btn">
+                📂 Dossiê: A Estética do Medo
+            </a>
+
+            <a href="https://instagram.com/malocaperalta" class="btn">
+                📸 Instagram
+            </a>
+
+            <a href="https://youtube.com/@malocaperalta" class="btn">
+                🎥 YouTube
+            </a>
             
-            <p style="font-size: 1.4rem; max-width: 800px; margin: 0 auto 35px; line-height: 1.6;">
-                Quando o Posto Pelanda aciona a Vtr 13135 para remover o "mau aspecto" de um trabalhador e o preconceito invade o domicílio.
-            </p>
-
-            <a href="https://rafajamur.substack.com/p/a-estetica-do-medo" 
-               target="_blank"
-               class="btn"
-               style="display: inline-block; padding: 20px 40px; background-color: #ffcc00; color: #000; font-weight: bold; text-decoration: none; border-radius: 5px; font-size: 1.2rem; transition: 0.3s;">
-                LER O RELATO COMPLETO NO SUBSTACK
+            <a href="https://www.facebook.com/profile.php?id=61585153558537" class="btn">
+                f Facebook
             </a>
         </div>
-    </section>
 
-    <section style="padding: 60px 0; background-color: #fff;">
-        <div class="container">
-            <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 10px;">O Asfalto Fala: Provas Audiovisuais</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 40px;">O registro irrefutável da abordagem e do preconceito sistêmico.</p>
-            
-            <div class="video-grid">
-                <div>
-                    <iframe height="315" src="https://www.youtube.com/embed/HYCDIUZKZo0" frameborder="0" allowfullscreen></iframe>
-                    <h3 style="margin-top: 15px;">Resistência e Estética</h3>
-                    <p>Entre o skate e o mamão, a resposta ao higienismo curitibano.</p>
-                </div>
-                <div>
-                    <iframe height="315" src="https://www.youtube.com/embed/bg-SpU-qEtg" frameborder="0" allowfullscreen></iframe>
-                    <h3 style="margin-top: 15px;">O Tribunal do Vizinho</h3>
-                    <p>Onde o "senso comum" criminaliza quem trabalha com reciclagem.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section style="
-        background-color: #f4f4f4;
-        padding: 80px 20px;
-        color: #333;
-        line-height: 1.6;
-        border-top: 1px solid #ddd;">
-        
-        <div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
-            
-            <div style="flex: 2; min-width: 300px;">
-                <h2 style="color: #000; font-size: 2.2rem; margin-bottom: 25px; border-left: 8px solid #ffcc00; padding-left: 20px;">
-                    O Homem por Trás do Carrinho e da Câmera
-                </h2>
-                <p style="margin-bottom: 15px; font-size: 1.15rem;">
-                    Sou técnico da UFPR, pesquisador e um cidadão que decidiu não aceitar o silêncio como norma. Minha trajetória é marcada pela busca pela transparência: da experiência internacional em Portugal — onde confrontei sistemas de vigilância corporativa — ao cotidiano em Curitiba.
-                </p>
-                <p style="margin-bottom: 15px; font-size: 1.15rem;">
-                    A <strong>Maloca Peralta</strong> é o meu QG de resistência. Em Faro, testemunhei o abuso de privilégios de administrador de sistemas para o assédio moral; hoje, denuncio o uso do aparato público para o higienismo privado.
-                </p>
-                <p style="font-weight: bold; color: #000; font-size: 1.2rem; margin-top: 20px;">
-                    Atuo onde a vida pulsa, guiado pelo princípio de viver na luz.
-                </p>
-            </div>
-
-            <div style="flex: 1; min-width: 280px; background: #fff; padding: 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #eee;">
-                <h3 style="margin-top: 0; font-size: 1.3rem; border-bottom: 3px solid #ffcc00; padding-bottom: 12px; text-transform: uppercase;">Frentes de Atuação</h3>
-                
-                <div style="margin-top: 25px;">
-                    <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong>🌱 Saúde:</strong> Práticas Integrativas (Aiprati)</p>
-                    <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong>💻 Tecnologia:</strong> Consultoria Ética (Rafajamur)</p>
-                    <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong>✊ Mobilização:</strong> Engajamento Social (Bora Lutar)</p>
-                    <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong>🌳 Memória:</strong> Preservação Familiar (Jamurs)</p>
-                </div>
-                
-                <p style="font-size: 0.95rem; color: #777; font-style: italic; margin-top: 30px; line-height: 1.4;">
-                    "A integridade do pesquisador é o que sustenta a força da denúncia."
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer style="background-color: #000; color: #fff; padding: 50px 20px; text-align: center;">
-        <div class="container">
-            <p style="font-size: 1.2rem; margin-bottom: 20px;">Acompanhe o desfecho: Depoimento na Corregedoria da PMPR.</p>
-            <p style="font-size: 0.9rem; color: #999;">© 2025 Maloca Peralta - Todos os direitos de resistência reservados.</p>
-        </div>
-    </footer>
+        <footer>
+            © 2024 Maloca Peralta. Autonomia e Poesia.
+        </footer>
+    </div>
 
 </body>
 </html>
