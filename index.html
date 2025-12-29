@@ -68,6 +68,7 @@
             font-weight: bold;
             transition: all 0.2s ease;
             box-shadow: 4px 4px 0px #1a1a1a;
+            position: relative; /* Para ajustes finos */
         }
 
         .btn:hover {
@@ -76,6 +77,7 @@
             background-color: #f0f0f0;
         }
 
+        /* Estilo Destaque (Preto) */
         .btn.destaque {
             background-color: #1a1a1a;
             color: #fff;
@@ -86,6 +88,21 @@
         .btn.destaque:hover {
             background-color: #333;
             box-shadow: 2px 2px 0px #999;
+        }
+
+        /* NOVO: Estilo Alerta/Bora Lutar (Vermelho) */
+        .btn.alert {
+            background-color: #dc2626; /* Vermelho sangue */
+            color: #fff;
+            border: 1px solid #1a1a1a;
+            box-shadow: 4px 4px 0px #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn.alert:hover {
+            background-color: #b91c1c;
+            box-shadow: 2px 2px 0px #1a1a1a;
         }
 
         footer {
@@ -104,7 +121,12 @@
         <p class="bio">Aqui a gente fala de verdade, escreve porque precisa e vive porque Ele vive.</p>
 
         <div class="links">
-            <a href="https://malocaperalta.com.br/" class="btn destaque">
+            
+            <a href="https://boralutar.com.br" class="btn alert">
+                👊 BORA LUTAR (O ECOSSISTEMA)
+            </a>
+
+            <a href="https://boralutar.com.br/livro/" class="btn destaque">
                 📖 Escreve a porra do livro
             </a>
 
@@ -134,7 +156,7 @@
         </div>
 
         <footer>
-            © 2024 Maloca Peralta. Autonomia e Poesia.
+            © 2025 Maloca Peralta. Autonomia e Poesia.
         </footer>
     </div>
 
