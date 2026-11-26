@@ -1,0 +1,109 @@
+---
+layout: default
+---
+
+<style>
+  .story-header {
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed #1a1a1a;
+  }
+
+  .story-header h1 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+    margin: 10px 0 8px;
+  }
+
+  .story-body p {
+    margin-bottom: 18px;
+    font-size: 1rem;
+  }
+
+  .story-body blockquote,
+  .story-body .corte {
+    background: #fff;
+    border: 1px solid #1a1a1a;
+    border-left: 5px solid #dc2626;
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 24px 0;
+    box-shadow: 4px 4px 0px #1a1a1a;
+    font-size: 0.94rem;
+  }
+
+  .story-body hr {
+    border: none;
+    border-top: 1px dashed #999;
+    margin: 28px 0;
+  }
+
+  .ponte-box {
+    margin-top: 40px;
+    padding: 20px;
+    background: #1a1a1a;
+    color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px #999;
+  }
+
+  .ponte-box .tag { color: #fca5a5; }
+
+  .ponte-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .ponte-links a {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+  }
+
+  .ponte-links a.vermelho {
+    background: #dc2626;
+    color: #fff;
+  }
+
+  .ponte-links a.claro {
+    background: #fff;
+    color: #1a1a1a;
+  }
+</style>
+
+<article>
+  <header class="story-header">
+    <a href="/historias/" class="tag" style="text-decoration:none; color:#1a1a1a;">← Voltar para todas as histórias</a>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p style="color:#555; font-style:italic;">{{ page.subtitle }}</p>
+    {% endif %}
+    {% if page.date %}
+      <time class="tag" style="margin-top:8px;">{{ page.date | date: "%d/%m/%Y" }}</time>
+    {% endif %}
+  </header>
+
+  <div class="story-body">
+    {{ content }}
+  </div>
+
+  <aside class="ponte-box">
+    <span class="tag">// Ponte para o mundo real</span>
+    <p style="font-size:0.9rem;">
+      Esta fábula nasce de vivências reais na luta pelo direito à moradia e à autonomia em Curitiba.
+    </p>
+    <div class="ponte-links">
+      <a href="https://boralutar.com.br" target="_blank" rel="noopener noreferrer" class="vermelho">
+        👊 Apoie a luta concreta (boralutar.com.br)
+      </a>
+      <a href="https://rafajamur.substack.com" target="_blank" rel="noopener noreferrer" class="claro">
+        🧠 Ler no Substack
+      </a>
+    </div>
+  </aside>
+</article>

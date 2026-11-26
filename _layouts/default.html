@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Maloca Peralta</title>
+  {% seo %}
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f4f4f4;
+      color: #1a1a1a;
+      line-height: 1.7;
+      padding: 20px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-bottom: 14px;
+      margin-bottom: 32px;
+      border-bottom: 2px solid #1a1a1a;
+      font-size: 0.9rem;
+    }
+
+    .topbar a {
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .topbar a:hover {
+      text-decoration: underline;
+    }
+
+    .topbar nav {
+      display: flex;
+      gap: 16px;
+    }
+
+    .card {
+      display: block;
+      padding: 18px 20px;
+      background-color: #fff;
+      color: #1a1a1a;
+      text-decoration: none;
+      border: 1px solid #1a1a1a;
+      border-radius: 8px;
+      box-shadow: 4px 4px 0px #1a1a1a;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px #1a1a1a;
+      background-color: #f0f0f0;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #555;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid #ccc;
+      font-size: 0.75rem;
+      color: #666;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer a { color: #1a1a1a; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a href="/">👻 Maloca Peralta</a>
+      <nav>
+        <a href="/historias/">Histórias</a>
+        <a href="https://rafajamur.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
+        <a href="https://boralutar.com.br" target="_blank" rel="noopener noreferrer" style="color:#dc2626;">Bora Lutar</a>
+      </nav>
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer>
+      <span>© 2026 Maloca Peralta. Autonomia e Poesia.</span>
+      <a href="/feed.xml">RSS</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+title: "Maloca Peralta"
+description: "Verdades ditas brincando — fábulas, crônicas e o Livro XP."
+url: "https://malocaperalta.com.br"
+baseurl: ""
+lang: pt-BR
+timezone: America/Sao_Paulo
+
+markdown: kramdown
+
+collections:
+  historias:
+    output: true
+    permalink: /historias/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "historias"
+    values:
+      layout: "historia"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
