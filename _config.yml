@@ -15,6 +15,10 @@ collections:
 defaults:
   - scope:
       path: ""
+    values:
+      image: /assets/img/og-maloca.jpg
+  - scope:
+      path: ""
       type: "historias"
     values:
       layout: "historia"
