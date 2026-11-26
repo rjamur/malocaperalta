@@ -1,0 +1,184 @@
+---
+layout: default
+---
+
+<style>
+  body {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+  }
+
+  .topbar {
+    border-bottom: 2px solid #f0f0f0;
+  }
+
+  .topbar a {
+    color: #f0f0f0;
+  }
+
+  .topbar nav a[href*="boralutar"] {
+    color: #f87171 !important;
+  }
+
+  .tag {
+    color: #a3a3a3;
+  }
+
+  .story-header {
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed #555;
+  }
+
+  .story-header a.voltar {
+    text-decoration: none;
+    color: #a3a3a3;
+  }
+
+  .story-header a.voltar:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  .story-header h1 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+    margin: 10px 0 8px;
+    color: #ffffff;
+  }
+
+  .story-subtitle {
+    color: #b5b5b5;
+    font-style: italic;
+  }
+
+  .story-body p {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    color: #e6e6e6;
+  }
+
+  .story-body strong {
+    color: #ffffff;
+  }
+
+  .story-body em {
+    color: #d4d4d4;
+  }
+
+  .story-body a {
+    color: #f87171;
+    text-decoration: underline;
+  }
+
+  .story-body blockquote,
+  .story-body .corte {
+    background: #171717;
+    color: #e6e6e6;
+    border: 1px solid #f0f0f0;
+    border-left: 5px solid #dc2626;
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 24px 0;
+    box-shadow: 4px 4px 0px #333;
+    font-size: 0.94rem;
+  }
+
+  .story-body hr {
+    border: none;
+    border-top: 1px dashed #444;
+    margin: 28px 0;
+  }
+
+  .ponte-box {
+    margin-top: 40px;
+    padding: 20px;
+    background: #171717;
+    color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px #dc2626;
+  }
+
+  .ponte-box .tag {
+    color: #f87171;
+  }
+
+  .ponte-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .ponte-links a {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+  }
+
+  .ponte-links a.vermelho {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+  }
+
+  .ponte-links a.vermelho:hover {
+    background: #b91c1c;
+  }
+
+  .ponte-links a.claro {
+    background: #ffffff;
+    color: #0d0d0d;
+  }
+
+  .ponte-links a.claro:hover {
+    background: #d4d4d4;
+  }
+
+  footer {
+    border-top: 1px solid #333;
+    color: #888;
+  }
+
+  footer a {
+    color: #e6e6e6;
+  }
+</style>
+
+<article>
+  <header class="story-header">
+    <a href="/historias/" class="tag voltar">← Voltar para todas as histórias</a>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="story-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    {% if page.date %}
+      <time class="tag" style="margin-top:8px;">{{ page.date | date: "%d/%m/%Y" }}</time>
+    {% endif %}
+  </header>
+
+  <div class="story-body">
+    {{ content }}
+  </div>
+
+  <aside class="ponte-box">
+    <span class="tag">// Ponte para o mundo real</span>
+    <p style="font-size:0.9rem;">
+      Esta fábula nasce de vivências reais na luta pelo direito à moradia e à autonomia em Curitiba.
+    </p>
+    <div class="ponte-links">
+      <a href="https://boralutar.com.br" target="_blank" rel="noopener noreferrer" class="vermelho">
+        👊 Apoie a luta concreta (boralutar.com.br)
+      </a>
+      <a href="https://rafajamur.substack.com" target="_blank" rel="noopener noreferrer" class="claro">
+        🧠 Ler no Substack
+      </a>
+    </div>
+  </aside>
+</article>
