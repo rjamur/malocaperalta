@@ -134,39 +134,39 @@ layout: null
         <p class="bio">Aqui a gente fala de verdade, escreve porque precisa e vive porque Ele vive.</p>
 
         <div class="links">
-            <a href="/historias/" class="btn destaque">
+            <a href="/historias/" class="btn destaque" data-botao="historias">
                 🐇 Histórias (Fábulas do Castelo de Tocas)
             </a>
 
-            <a href="https://boralutar.com.br" class="btn alert">
+            <a href="https://boralutar.com.br" class="btn alert" data-botao="bora_lutar">
                 👊 BORA LUTAR (O ECOSSISTEMA)
             </a>
 
-            <a href="https://boralutar.com.br/livro/" class="btn destaque">
+            <a href="https://boralutar.com.br/livro/" class="btn destaque" data-botao="livro">
                 📖 Escreve a porra do livro
             </a>
 
-            <a href="https://wa.me/5541992313435" class="btn">
+            <a href="https://wa.me/5541992313435" class="btn" data-botao="whatsapp">
                 💬 Chama no WhatsApp
             </a>
 
-            <a href="https://rafajamur.substack.com" class="btn">
+            <a href="https://rafajamur.substack.com" class="btn" data-botao="substack">
                 🧠 Blog (Substack)
             </a>
 
-            <a href="dossie_a_estetica_do_medo.html" class="btn">
+            <a href="dossie_a_estetica_do_medo.html" class="btn" data-botao="dossie_estetica_medo">
                 📂 Dossiê: A Estética do Medo
             </a>
 
-            <a href="https://instagram.com/malocaperalta" class="btn">
+            <a href="https://instagram.com/malocaperalta" class="btn" data-botao="instagram">
                 📸 Instagram
             </a>
 
-            <a href="https://youtube.com/@malocaperalta" class="btn">
+            <a href="https://youtube.com/@malocaperalta" class="btn" data-botao="youtube">
                 🎥 YouTube
             </a>
 
-            <a href="https://www.facebook.com/profile.php?id=61585153558537" class="btn">
+            <a href="https://www.facebook.com/profile.php?id=61585153558537" class="btn" data-botao="facebook">
                 f Facebook
             </a>
         </div>
@@ -175,6 +175,21 @@ layout: null
             © 2026 Maloca Peralta. Autonomia e Poesia.
         </footer>
     </div>
+
+    <script>
+        document.querySelectorAll('.links a[data-botao]').forEach(function (link) {
+            link.addEventListener('click', function () {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'clique_botao_home', {
+                        botao_nome: link.dataset.botao,
+                        botao_texto: link.textContent.trim(),
+                        destino_url: link.href,
+                        transport_type: 'beacon'
+                    });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,58 @@
+{% if jekyll.environment == 'production' %}
+<script>
+  (function () {
+    var alvo = document.querySelector('main');
+    if (!alvo) return;
+
+    var palavras = (alvo.textContent || '').trim().split(/\s+/).filter(Boolean).length;
+    // Exige no mínimo 15s ou ~6 palavras/seg (360 palavras/min) para filtrar rolagem rápida
+    var tempoMinimo = Math.max(15, Math.round(palavras / 6));
+
+    var segundosAtivos = 0;
+    var atingiu90 = false;
+    var enviado = false;
+
+    function checarScroll90() {
+      var rect = alvo.getBoundingClientRect();
+      var altura = alvo.offsetHeight;
+      if (altura <= 0) return false;
+      var lido = window.innerHeight - rect.top;
+      return (lido / altura) >= 0.9;
+    }
+
+    function tentarEnviar() {
+      if (enviado || !atingiu90 || segundosAtivos < tempoMinimo) return;
+      enviado = true;
+      clearInterval(timer);
+      window.removeEventListener('scroll', aoRolar);
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'leitura_completa', {
+          historia_titulo: {{ page.title | default: "Sem título" | jsonify }},
+          historia_url: window.location.pathname,
+          tempo_leitura_seg: segundosAtivos,
+          palavras: palavras,
+          transport_type: 'beacon'
+        });
+      }
+    }
+
+    function aoRolar() {
+      if (!atingiu90 && checarScroll90()) {
+        atingiu90 = true;
+        tentarEnviar();
+      }
+    }
+
+    window.addEventListener('scroll', aoRolar, { passive: true });
+
+    var timer = setInterval(function () {
+      if (document.visibilityState === 'visible') {
+        segundosAtivos += 1;
+        if (!atingiu90 && checarScroll90()) atingiu90 = true;
+        tentarEnviar();
+      }
+    }, 1000);
+  })();
+</script>
+{% endif %}
