@@ -112,5 +112,10 @@
       <a href="/feed.xml">RSS</a>
     </footer>
   </div>
+
+  {% if page.collection == 'historias' %}
+    {% include leitura_ga4.html %}
+  {% endif %}
+
 </body>
 </html>
